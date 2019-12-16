@@ -1,0 +1,63 @@
+{
+    "Kahve": [
+        { 
+            "url":"https://www.kahvedunyasi.com/turk-kahvesi-c-3400",
+            "image":"https://cdnd.kahvedunyasi.com/product/250x250/13.300.2110.0006.png",
+            "acıklama":"Orta Kavrulmuş Türk Kahvesi 100gr",
+             "fiyat":"5.5 TL"            
+        },
+        {
+            "url":"https://www.kahvedunyasi.com/turk-kahvesi-c-3400",
+            "image":"https://cdnd.kahvedunyasi.com/product/250x250/13.300.2110.0004.png",
+            "acıklama":"Çok Kavrulmuş Türk Kahvesi 100gr",
+            "fiyat":"5.5 TL"  
+            
+        },
+        {   
+            "url":"https://www.kahvedunyasi.com/turk-kahvesi-c-3400",
+            "image":"https://cdnd.kahvedunyasi.com/product/250x250/13.300.2110.0003.png",
+            "acıklama":"Damla Sakızlı Türk Kahvesi 100gr",
+            "fiyat":"9 TL"
+            
+        },
+        {   
+            "url":"https://www.kahvedunyasi.com/turk-kahvesi-c-3400",
+            "image":"https://cdnd.kahvedunyasi.com/product/250x250/13.300.2110.0007.png",
+            "acıklama":"Orta Kavrulmuş Türk Kahvesi 250gr",
+            "fiyat":"16,5 TL"
+           
+        },
+
+
+
+        { 
+            "url":"https://www.kahvedunyasi.com/turk-kahvesi-c-3400",
+            "image":"https://cdnd.kahvedunyasi.com/product/250x250/13.300.2110.0019-1.png",
+            "acıklama":"Orta Kavrulmuş Türk Kahvesi 100gr 12li Ekonomik Paket",
+            "fiyat":"60 TL"
+            
+        },
+        {
+            "url":"https://www.kahvedunyasi.com/turk-kahvesi-c-3400",
+            "image":"https://cdnd.kahvedunyasi.com/product/250x250/13.300.2110.0002.png",
+            "acıklama":"Damla Sakızlı Türk Kahvesi 250gr",
+            "fiyat":"22 TL"
+            
+        },
+        {   
+            "url":"https://www.kahvedunyasi.com/turk-kahvesi-c-3400",
+            "image":"https://cdnd.kahvedunyasi.com/product/250x250/13.300.2110.0005.png",
+            "acıklama":"Çok Kavrulmuş Türk Kahvesi 250gr",
+            "fiyat":"16.5 TL"
+            
+        },
+        {   
+            "url":"https://www.kahvedunyasi.com/turk-kahvesi-c-3400",
+            "image":"https://cdnd.kahvedunyasi.com/product/250x250/13.300.2110.0010.png",
+            "acıklama":"Orta Kavrulmuş Türk Kahvesi Çekirdek 1kg ",
+            "fiyat":"52 TL"
+           
+        }
+             
+    ]
+}
