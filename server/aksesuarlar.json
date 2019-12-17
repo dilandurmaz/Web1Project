@@ -1,0 +1,63 @@
+{
+    "Kahve": [
+        { 
+            "url":"https://www.kahvedunyasi.com/aksesuar-c-1802",
+            "image":"https://cdnd.kahvedunyasi.com/product/250x250/4d397_Filtre_Kahve_Keyif_Seti.png",
+            "acıklama":"Filtre Kahve Keyif Seti",
+             "fiyat":"75 TL"            
+        },
+        {
+            "url":"https://www.kahvedunyasi.com/aksesuar-c-1802",
+            "image":"https://cdnd.kahvedunyasi.com/product/250x250/14.500.8000.0018-1.png",
+            "acıklama":"Filtre Kahve Bardağı",
+            "fiyat":"24 TL"  
+            
+        },
+        {   
+            "url":"https://www.kahvedunyasi.com/aksesuar-c-1802",
+            "image":"https://cdnd.kahvedunyasi.com/product/250x250/357ea_Darussafaka_Cemiyeti_Kupa_Bardagi.png",
+            "acıklama":"Darüşşafaka Cemiyeti Kupa Bardağı",
+            "fiyat":"26 TL"
+            
+        },
+        {   
+            "url":"https://www.kahvedunyasi.com/aksesuar-c-1802",
+            "image":"https://cdnd.kahvedunyasi.com/product/250x250/11.110.1020.0016.png",
+            "acıklama":"French Press",
+            "fiyat":"42 TL"
+           
+        },
+
+
+
+        { 
+            "url":"https://www.kahvedunyasi.com/aksesuar-c-1802",
+            "image":"https://cdnd.kahvedunyasi.com/product/250x250/aa781_Biri_Sana_Biri_Bana_2%E2%80%99li_Mug_Seti.png",
+            "acıklama":"Biri Sana Biri Bana 2li Mug Seti",
+            "fiyat":"39 TL"
+            
+        },
+        {
+            "url":"https://www.kahvedunyasi.com/aksesuar-c-1802",
+            "image":"https://cdnd.kahvedunyasi.com/product/250x250/d76a6_Kahve_Dunyasi_Kupa_Bardak.png",
+            "acıklama":"Kahve Dünyası Kupa Bardak",
+            "fiyat":"23 TL"
+            
+        },
+        {   
+            "url":"https://www.kahvedunyasi.com/aksesuar-c-1802",
+            "image":"https://cdnd.kahvedunyasi.com/product/250x250/14.500.8000.0038-1.png",
+            "acıklama":"Fondü Seti",
+            "fiyat":"75 TL"
+            
+        },
+        {   
+            "url":"https://www.kahvedunyasi.com/aksesuar-c-1802",
+            "image":"https://cdnd.kahvedunyasi.com/product/250x250/14.500.8000.0034-1.png",
+            "acıklama":"Türk Kahvesi Vip Set ",
+            "fiyat":"89 TL"
+           
+        }
+             
+    ]
+}

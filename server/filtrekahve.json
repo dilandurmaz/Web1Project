@@ -1,0 +1,63 @@
+{
+    "Kahve": [
+        { 
+            "url":"https://www.kahvedunyasi.com/filtre-kahve-c-3401",
+            "image":"https://cdnd.kahvedunyasi.com/product/250x250/13.300.2040.0001.png",
+            "acıklama":"Filtre Kahve 250gr",
+             "fiyat":"25 TL"            
+        },
+        {
+            "url":"https://www.kahvedunyasi.com/filtre-kahve-c-3401",
+            "image":"https://cdnd.kahvedunyasi.com/product/250x250/13.300.2130.0031.png",
+            "acıklama":"Fındık Aromalı Filtre Kahve 250gr",
+            "fiyat":"29 TL"  
+            
+        },
+        {   
+            "url":"https://www.kahvedunyasi.com/filtre-kahve-c-3401",
+            "image":"https://cdnd.kahvedunyasi.com/product/250x250/13.300.2130.0032.png",
+            "acıklama":"Vanilya Aromalı Filtre Kahve 250gr",
+            "fiyat":"29 TL"
+            
+        },
+        {   
+            "url":"https://www.kahvedunyasi.com/filtre-kahve-c-3401",
+            "image":"https://cdnd.kahvedunyasi.com/product/250x250/13.300.2130.0030.png",
+            "acıklama":"Karamel Aromalı Filtre Kahve 250gr",
+            "fiyat":"29 TL"
+           
+        },
+
+
+
+        { 
+            "url":"https://www.kahvedunyasi.com/filtre-kahve-c-3401",
+            "image":"https://cdnd.kahvedunyasi.com/product/250x250/13.300.2130.0025.png",
+            "acıklama":"Kenya Yöresel Kahve 250gr",
+            "fiyat":"36 TL"
+            
+        },
+        {
+            "url":"https://www.kahvedunyasi.com/filtre-kahve-c-3401",
+            "image":"https://cdnd.kahvedunyasi.com/product/250x250/13.300.2130.0033.png",
+            "acıklama":"Kafeinsiz Filtre Kahve 250gr",
+            "fiyat":"38 TL"
+            
+        },
+        {   
+            "url":"https://www.kahvedunyasi.com/filtre-kahve-c-3401",
+            "image":"https://cdnd.kahvedunyasi.com/product/250x250/13.300.2130.0026.png",
+            "acıklama":"Guetemala Yöresel Kahve 250gr",
+            "fiyat":"32 TL"
+            
+        },
+        {   
+            "url":"https://www.kahvedunyasi.com/filtre-kahve-c-3401",
+            "image":"https://cdnd.kahvedunyasi.com/product/250x250/13.300.2130.0027.png",
+            "acıklama":"Santos Yöresel Kahve 250 gr ",
+            "fiyat":"32 TL"
+           
+        }
+             
+    ]
+}
