@@ -3,25 +3,25 @@ var fs = require("fs")
 var uye = express.Router()
 
 uye.get('/', function (req, res) {
-    
-    res.send(uye)
+
+  res.send(uye)
 
 })
 
-uye.post('/degistir', function (req, res) {
-    //dosya okundu
-    
-    user = req.body.user
-    
-    fs.writeFileSync("Uyeler.json",user);
+uye.post('/kaydet', function (req, res) {
 
-    //json formatında olduğu için objeye çevrildi
-  
-    //res.send(coffee.kahveler) direk kahveleri döndürebilirsin
-   
-    //okunan dosya bilgileri döndürüldü.
-     
-    res.send(uye)
+  let arr = []
+  //gelen isteği aldık
+  let newUser = req.body
+  //tum uyelerimizi okuduk
+  let data = fs.readFileSync("Uyeler.json");
+  uyeler = JSON.parse(data)
+  //önceki üyelere yeni üyeyi ekledik
+  arr.push(...uyeler, newUser)
+  //tüm üyeleri formatlı olarak dosyaya yazdık format: (iç içe objelerde 2 boşluk bırakarak) 
+  fs.writeFileSync("Uyeler.json", JSON.stringify(arr, undefined, 2))
+
+  res.send(true)
 })
 
 
