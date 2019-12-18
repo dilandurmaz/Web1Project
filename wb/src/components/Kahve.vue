@@ -6,20 +6,20 @@
 
 
     <div>
-       <img style="width:100%;position:relative;top:100px;" src="../assets/kahveresmi.png" alt="Kahve resmi anasayfa">
+       <img style="width:100%;position:relative;top:200px;" src="../assets/kahveresmi.png" alt="Kahve resmi anasayfa">
     </div>
      
       <router-link    to="/turkkahvesi-sayfasi"> 
-    <b-button style="position:relative;top:110px;left:-300px;"   variant="outline-secondary">TÜRK KAHVESİ</b-button>
+    <b-button style="position:relative;top:210px;left:-300px;"   variant="outline-secondary">TÜRK KAHVESİ</b-button>
       </router-link>
        <router-link    to="/filtrekahve-sayfasi"> 
-    <b-button style="position:relative;top:110px;left:-290px;"   variant="outline-secondary">FİLTRE KAHVE</b-button>
+    <b-button style="position:relative;top:210px;left:-290px;"   variant="outline-secondary">FİLTRE KAHVE</b-button>
        </router-link>
-    <b-button style="position:relative;top:110px;left:-280px;"   variant="outline-secondary">YÖRESEL KAHVE</b-button>
-    <b-button style="position:relative;top:110px;left:-270px;"   variant="outline-secondary">ESPRESSO</b-button>
-    <b-button style="position:relative;top:110px;left:-260px;"   variant="outline-secondary">HAZIR KAHVELER</b-button> <br><br>
-    <b-button style="position:relative;top:110px;left:-490px;"   variant="outline-secondary">SALEP VE SICAK ÇİKOLATA</b-button>
-    <b-button style="position:relative;top:110px;left:-470px;"   variant="outline-secondary">ŞURUPLAR</b-button>
+    <b-button style="position:relative;top:210px;left:-280px;"   variant="outline-secondary">YÖRESEL KAHVE</b-button>
+    <b-button style="position:relative;top:210px;left:-270px;"   variant="outline-secondary">ESPRESSO</b-button>
+    <b-button style="position:relative;top:210px;left:-260px;"   variant="outline-secondary">HAZIR KAHVELER</b-button> <br><br>
+    <b-button style="position:relative;top:210px;left:-490px;"   variant="outline-secondary">SALEP VE SICAK ÇİKOLATA</b-button>
+    <b-button style="position:relative;top:210px;left:-470px;"   variant="outline-secondary">ŞURUPLAR</b-button>
     
   
     <div class="row" style="position:relative;top:140px;"> 
@@ -32,7 +32,6 @@
                              <img  v-bind:src="kahve.image" />     
                             </a>
                              <p><strong> {{kahve.acıklama}} </strong> </p>
-                            
                              <p style="color:red;"><strong> {{kahve.fiyat}} </strong> </p>
                          
                           
@@ -196,6 +195,7 @@
 
 
 <script>
+
 const API_URL="http://localhost:7000/home"
 export default {
 
@@ -206,12 +206,10 @@ export default {
     }),
 
     mounted() {
-
         fetch(API_URL)
         .then(response=>response.json())
         .then(result=> {
             this.Kahveler=result.Kahve;
-            console.log(this.Kahveler)
         } )
         
     }
@@ -338,7 +336,7 @@ export default {
 
  .konum1 {
   position:relative;
-  top:9500px;
+  top:380px;
   background-color:#6c0c33;
   border-radius: 0px;
   width:100%;
@@ -346,8 +344,8 @@ export default {
  .footerfoto
  {
    position:absolute;
-   right:400px;
-   bottom:300px;
+   right:200px;
+   bottom:20px;
  }
 
 
@@ -362,7 +360,7 @@ export default {
 
   height:80px;
   text-align:center;
-  top:10270px; 
+  top:2400px; 
   width:1630px;
   height: 70px;
    cursor: pointer;
@@ -373,7 +371,7 @@ export default {
   border-radius: 0px;
   position: absolute;
   background-color: white;
-  top:10320px;
+  top:2500px;
   left:-100px;
   width:100%;
   height:80px;
@@ -383,7 +381,7 @@ export default {
   border-radius: 0px;
   position: absolute;
   background-color: #e7e3e3;
-  top:10380px;
+   top:2600px;
   left:5px;
   width:100%;
   height:80px;

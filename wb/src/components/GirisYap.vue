@@ -24,32 +24,39 @@
     <!--------------------------------------------------------------------------------------------------------------------------------------------------------->
     <p style="position:absolute;top:120px;left:200px; font-size:13px;"> VEYA</p>
     <!--------------------------------------------------------------------------------------------------------------------------------------------------------->
-    <div class="inputlara_ait_container">
-      <!---REQUİRED:FORM GÖNDERİLMEDEN GİRİŞ ALANININ DOLDURULMASI GEREKTİĞİNİ SÖYLER.kaldırıldığında uyarı mesajı vermez-->
-      <div class="inputBox"> 
-        <input v-model="email" type="text" name="username" >
-        <label style="position:absolute;top:-20px;">E-Posta</label>           
-      </div>
-      <p style="color:red;font-size:10px; position:absolute;left:1px;top:50px;" v-show="!eposta_girildi_mi">*E-postanızı belirtmelisiniz.</p>
-    <!--Password type:kullanıcıların güvenli bir şekilde şifre girişini sağlar-->
-    <!--Password type:password yerine text olsaydı şifre noktalı gözükmek yerine açık açık gözükecekti-->
-      <div class="inputBox"> 
-        <!--minimum 8 karakter olabilir-->
-        <input v-model="pass" type="password" minlength="8"  />
-        <label style="position:absolute;top:-20px;">Parola</label>
-      </div> 
-        <p style="color:red;font-size:10px; position:absolute;left:1px;top:145px;" v-show="!eposta_girildi_mi">*Şifrenizi belirtmelisiniz.</p>
-    </div>
-    <!--------------------------TOGGLE YAPIMI BAŞLANGIÇ---------------------------------------->
-
-    <!----------------------------TOGGLE BİTİŞ--------------------------------------------------------->
-
-
+    
+   
+   <div style="position:relative;top:200px;">  
+   <div>
+   <input 
+   v-model="input.username"
+   type="text"
+   id="email"
+   name="email"
+   required
+   autofocus="autofocus"
+   class="inputs"
+   placeholder="Eposta Adresinizi Giriniz"
+   />
+   </div>
+   <div style="position:relative;top:20px;">
+    <input 
+   v-model="input.password"
+   type="text"
+   id="password"
+   name="password"
+   required  
+   class="inputs"
+   placeholder="Parola Giriniz"
+   />
+   </div>
+    
+   </div>
     <!--------------------------------------------------------------------------------------------------------------------------------------------------------->
     <a  href="https://www.kahvedunyasi.com/sifremi-unuttum"  style="position:absolute;bottom:170px; float:left;text-decoration:underline;left:73px;">Parolanızı mı unuttunuz?</a>
 
       <div class="girisyap_btn_container">
-      <button @click.prevent="eposta_uyari"  type="submit" class="girisyap_btn">GİRİŞ YAP</button>
+      <button v-on:click="login()"  type="submit" class="girisyap_btn">GİRİŞ YAP</button>
       </div>
     <!--------------------------------------------------------------------------------------------------------------------------------------------------------->
       <div class="hesabınız_yok_mu">
@@ -221,26 +228,49 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   
     data(){
       return{
-        eposta_girildi_mi : true,
-     
-        email: '',
-        pass: '',
+        input: {
+          username:"",
+          password:""
+        },
+        Uyeler: [],
+        hatali:false
         
-      }
+      };
     },
-     methods:{
-       eposta_uyari()
-       {
-         if (this.email == '' || this.pass == ''){
-            this.eposta_girildi_mi = false;
-         }
-       },
-           
-     }   
+    async created () {
+     
+     try {
+       const res = await axios.get("http://localhost:7000/uye");
+       this.Uyeler = res.data;
+     }catch (e) {
+       console.error(e);
+     }
+    },
+    methods: {
+      login(){
+        for (let i=0;i<this.Uyeler.length;i++){
+          if(this.input.username!= "" && this.input.password !=""){
+            if (
+               this.input.username == this.Uyeler[i].Eposta &&
+               this.input.password == this.Uyeler[i].Parola
+
+            ){
+              alert("Giriş Başarılı Anasayfaya Yönlendiriliyorsunuz");
+              this.$emit("authendicated",true);
+              this.$router.replace({path:"/"});
+              this.hatali =true ;
+            }
+          }
+        }
+      }
+    }
+  
+      
 
      
 }

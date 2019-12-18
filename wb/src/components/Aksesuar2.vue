@@ -2,55 +2,37 @@
 <template>
 <div>
     <div>
-       <img class='kahvekonum' src="../assets/cikolata.png" alt="Kahve resmi anasayfa">
+       <img class='kahvekonum' src="../assets/aksesuar.png" alt="Kahve resmi anasayfa">
     </div>
-    <div class="konum">
-                        <div>
-                               <div class="container1">
-                               <img class="k1" src="../assets/as1.png"  >
-                               
-                                    <div class="overlay">S E P E T E E K L E</div>
-                               
-       
-                               
-                               </div>
-                               <div class="container2">
-                               <img class="k2"  src="../assets/as2.png"  >
-                                <div class="overlay">S E P E T E E K L E</div>
-                               </div>
-                               <div class="container3">
-                               <img class="k3"  src="../assets/as3.png" >
-                                <div class="overlay">S E P E T E E K L E</div>
-                               </div>
-                               <div class="container4">
-                               <img class="k4"  src="../assets/as4.png"  >
-                               <div class="overlay">S E P E T E E K L E</div>
-                               </div>
-                        </div>
-
-                         <div class="iki">
-                               <div class="container1">
-                               <img class="k1" src="../assets/as5.png"  >
-                               <div class="overlay">S E P E T E E K L E</div>
-                               </div>
-                               <div class="container2">
-                               <img class="k2"  src="../assets/as6.png"  >
-                                <div class="overlay">S E P E T E E K L E</div>
-                               </div>
-                               <div class="container3">
-                               <img class="k3"  src="../assets/as7.png" >
-                                <div class="overlay">S E P E T E E K L E</div>
-                               </div>
-                               <div class="container4">
-                               <img class="k4"  src="../assets/as8.png"  >
-                               <div class="overlay">S E P E T E E K L E</div>
-                               </div>
-                        </div>
-
+    <router-link  to="/aksesuar-sayfasi">
+    <div>
+       <img style="position:relative;left:-600px;top:210px;width:4%;" src="../assets/tek.png" >
+    </div>
+    </router-link>
+    <div>
+       <router-link  to="/aksesuar2-sayfasi"> <img  style="position:relative;left:-500px;top:150px;width:55px;;"  src="../assets/çok.png" ></router-link>
     </div>
 
-
+         
+         
+    <div class="row" style="position:relative;top:140px;"> 
+                     <!-- %100 -->
+                     
+                       <div class="col-3"  v-for="(kahve,index) in Aksesuarlar" :key="index">
+                            <!-- %25 -->
+                            <a v-bind:href="kahve.url" >
+                                <br> <br> <br> <br> <br>  
+                             <img  v-bind:src="kahve.image" />     
+                            </a>
+                             <p><strong> {{kahve.acıklama}} </strong> </p>
+                             <p style="color:red;"><strong> {{kahve.fiyat}} </strong> </p>
+                         
+                          
+                        </div>
+                        
     
+     </div> 
+
 
 
 
@@ -146,26 +128,18 @@
 
                 </div>
 
-                 <div class="paginationkonum">
-                     <router-link to="/cikolata-sayfasi"> 
-                    <img src="../assets/r1.png" >
-                      </router-link>
-                       
-                       <img src="../assets/b2.png" >
-                       
+                <div class="yazıkonum">
+                    <p> Özel Tasarım Aksesuar Çeşitleri ve Hediye Kutuları Kahve Dünyası'nda! <br><br>
+                    
+                    Kahve hazırlama araçlarından hediye kutusu çeşitlerine, kahve makinesinden fondü setine kadar aradığınız birçok aksesuar Kahve Dünyası'nda! Kahvenizi hazırlarken <br>
+                    kaliteden vazgeçmeyin diye özel tasarım filtre kahve bardağı, espresso fincanı, Türk kahvesi fincanı ve uygun fiyatlı Türk kahvesi makinesi ile elektrikli  <br>
+                    cezveyi sizlerin beğenisine sunuyoruz. Kaliteli malzemeden üretilen, uygun fiyatlı ve kullanışlı french press ile kolayca filtre kahvenizi hazırlayabilirsiniz.  <br>
+                    Özel tasarım termos matara çeşitleri ile kahvenizi her an her yerde içebilmek için sıcak tutabilirsiniz. Fondü setiyle sıcak çikolata ve meyvenin eşsiz uyumunu evinizde <br>
+                     yaşayabilirsiniz. Farklı konseptlere göre hazırlanmış hediye kutularından birini seçerek içini dilediğinizce doldurabilir ve sevdiklerinizi mutlu edebilirsiniz.
                    
-                      <router-link to="/cikolata-sayfasi3"> 
-                       <img src="../assets/3.png" >
-                        </router-link>
+                    </p>
 
-                    <p style="color:#6c0c33;position:relative;left:200px;top:-50px;"> Tümünü Gör </p>
-
-
-                
                 </div>
-
-
-               
 
 
 
@@ -233,34 +207,41 @@
 </template>
 
 <script>
+const API_URL="http://localhost:7000/aksesuar"
 export default {
+
+    data:() =>({
+       
+       Aksesuarlar:[]
    
+    }),
+
+    mounted() {
+
+        fetch(API_URL)
+        .then(response=>response.json())
+        .then(result=> {
+            this.Aksesuarlar=result.Kahve;
+            console.log(this.Aksesuarlar)
+        } )
+        
+    }
+    
 }
 </script>
 
 <style scoped>
-.paginationkonum {
-
-    position: relative;
-    top:800px;
-}
-
-
-.sayfakonum {
-
-    position:relative;
-    top:800px;
-}
 .kahvekonum {
     position: relative;
-    top:100px;
-    width: 90%;
-    height: 200px;
+    top:200px;
+    width: 100%;
+    height:3%;
     left: 20px;
 }
+
 .konum {
     position:absolute;
-    top:320px;
+    top:280px;
 }
 .iki {
     position:absolute;
@@ -366,20 +347,29 @@ export default {
 }
 
 
+
+.yazıkonum {
+ position:relative;
+  top:-200px;
+  
+ 
+
+}
+
+
  .konum1 {
   position:relative;
-  top:1300px;
+  top:400px;
   background-color:#6c0c33;
   border-radius: 0px;
   width:100%;
  }
- .footerfoto
+  .footerfoto
  {
    position:absolute;
-   right:450px;
-   bottom:280px;
+   right:200px;
+   bottom:50px;
  }
-
 
 
 
@@ -392,7 +382,7 @@ export default {
 
   height:80px;
   text-align:center;
-  top:1180px; 
+  top:200px; 
   width:1630px;
   height: 70px;
    cursor: pointer;
@@ -403,7 +393,7 @@ export default {
   border-radius: 0px;
   position: relative;
   background-color: white;
-  top:1200px;
+   top:240px; 
   left:-100px;
   width:100%;
   height:80px;
@@ -413,7 +403,7 @@ export default {
   border-radius: 0px;
   position: relative;
   background-color: #e7e3e3;
-  top:1210px;
+   top:280px; 
   left:5px;
   width:100%;
   height:80px;
@@ -421,16 +411,6 @@ export default {
 .list-unstyled  :hover
 {
 color:yellow;
-}
-
-.sup-position2 {
-
-  position: fixed;
-  bottom:0;
-  left:0px;
-  background-color: white;
-  height: 45px;
-  z-index:9999;
 }
 
 

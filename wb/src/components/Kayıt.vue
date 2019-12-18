@@ -34,11 +34,7 @@ Kayıt Ol diyerek
 </p>
 </div>
 
-<!-------------------------------KAYIT OL BUTONU------------------------->
- <div class="kayitol_btn_container">
-   <button  @click.prevent="kayit_uyari" type="submit" class="kayitol_btn">KAYIT OL</button>
-   
-  </div>
+
 <!----------------------En alttaki hesabınız var mı link?----------------->
 <div class="hesabin_var_mi"> 
 <p> Zaten Hesabınız var mı?
@@ -49,36 +45,50 @@ Kayıt Ol diyerek
 
 
 
-<form >
+<form style="position:relative;top:200px;" >
 
-<!-------------------İnput alanları ve tipleri belirlendi------------------------->
-<div class="inputlara_ait_container">
-
-       <div   class="inputBox" >
-       <input v-model="text" type="text"  name="username">
-       <label style="top:82px">Ad Soyad</label>
+      <div>
+       <input v-model="AdSoyad" 
+       type="AdSoyad"
+       required
+       name="AdSoyad"
+       class="inputs"
+       placeholder="Ad Soyad giriniz">
+      </div>
+       <br>
+       <div>
+       <input v-model="Eposta" 
+       type="Eposta"
+       required
+       name="Eposta"
+       class="inputs"
+       placeholder="Eposta giriniz">
        </div>
- <p style="color:red;font-size:10px; position:absolute;left:1px;top:50px;" v-show="!bilgi_girildi_mi">*Ad soyad gerekmektedir.</p>
-      <div  class="inputBox" >
-       <input  v-model="email"  type="email"  >
-       <label  style="top:172px" >E-Posta</label>
-       </div> 
- <p style="color:red;font-size:10px; position:absolute;left:1px;top:140px;" v-show="!bilgi_girildi_mi">*E-postanızı belirtmelisiniz.</p>
-
-        <div class="inputBox">
-       <input   v-model="tel"  type="tel" > 
-       <label  style="top:262px">Cep Telefonu</label>
+         <br>
+       <div>
+       <input v-model="CepTelefonu" 
+       type="CepTelefonu"
+       required
+       name="CepTelefonu"
+       class="inputs"
+       placeholder="Cep Telefonu giriniz">
        </div>
-  <p style="color:red;font-size:10px; position:absolute;left:1px;top:230px;" v-show="!bilgi_girildi_mi">*Geçerli bir telefon numarası belirtmelisiniz..</p>
-
-       <div class="inputBox">
-       <input  v-model="pass"  type="password"  >
-       <label  style="top:352px">Parola</label>
-       </div>
-  <p style="color:red;font-size:10px; position:absolute;left:1px;top:320px;" v-show="!bilgi_girildi_mi">*Şifrenizi belirtmelisiniz..</p>
-        
+         <br>
+       <div>
+       <input v-model="Parola" 
+       type="email"
+       required
+       name="email"
+       class="inputs"
+       placeholder="Parola giriniz">
        </div>
 </form>
+
+<!-------------------------------KAYIT OL BUTONU------------------------->
+ <div class="kayitol_btn_container">
+   <button @click="userEkle"  type="submit" class="kayitol_btn">KAYIT OL</button>
+   
+  </div>
 </div>  
 
 <footer class="py-2 "> <!--Footer başlangıç-->
@@ -198,7 +208,7 @@ Kayıt Ol diyerek
         </strong>
     </a>
 </div>
-<div class="en.alt2">
+<div class="enalt2">
     <strong>
             <a style="color:rgb(143, 138, 138);font-family: Arial, Helvetica, sans-serif; font-size:15px; position:absolute;left:350px; bottom:35px;">Güvenli Ödeme Noktası</a>
             <img src="../assets/kredikartı.png" style=" position:absolute;left:520px;bottom:30px;">
@@ -234,24 +244,39 @@ Kayıt Ol diyerek
 </template>
 
 <script>
+import axios from "axios";
+const baseURL ="http://localhost:7000/uye/kaydet"
 export default {
     data(){
       return{
-       bilgi_girildi_mi:true,
-        text: '',
-        email: '',
-        tel:'',
-        pass: ''
+        user : [] ,
+        AdSoyad: '',
+        Eposta: '',
+        CepTelefonu:'',
+        Parola: ''
       }
     },
-     methods:{
-       kayit_uyari()
-       {
-         if (this.email == '' || this.pass == '' || this.text == '' || this.tel == ''){
-            this.bilgi_girildi_mi = false;
-         }
-       }
+    
+     methods: {
+       async userEkle() {
+         try{
+         const res = await axios.post(baseURL,{
        
+        AdSoyad:this.AdSoyad,
+        Eposta:this.Eposta,
+        CepTelefonu:this.CepTelefonu,
+        Parola:this.Parola
+       
+          
+         });
+          if(res.err === true) throw new Error()
+          else console.log("başarılı")
+       } catch {
+         console.log("hata")
+       }
+
+       },
+
      }
 }
 
@@ -438,7 +463,7 @@ margin-top:-75px;
 
  .konum1 {
   position:relative;
-  top:790px;
+  top:780px;
   background-color:#6c0c33;
   border-radius: 0px;
   width:100%;
@@ -446,8 +471,8 @@ margin-top:-75px;
  .footerfoto
  {
    position:absolute;
-   right:200px;
-   bottom:35px;
+   right:350px;
+   bottom:0px;
  }
 
 
@@ -462,7 +487,7 @@ margin-top:-75px;
 
   height:80px;
   text-align:center;
-  top:1120px; 
+  top:1000px; 
   width:1630px;
   height: 70px;
    cursor: pointer;
@@ -473,7 +498,7 @@ margin-top:-75px;
   border-radius: 0px;
   position: absolute;
   background-color: white;
-  top:1220px;
+  top:1100px;
   left:-100px;
   width:100%;
   height:80px;
@@ -483,7 +508,7 @@ margin-top:-75px;
   border-radius: 0px;
   position: absolute;
   background-color: #e7e3e3;
-  top:1335px;
+  top:1000px;
   left:5px;
   width:100%;
   height:80px;

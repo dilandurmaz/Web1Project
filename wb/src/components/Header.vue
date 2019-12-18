@@ -110,37 +110,17 @@
 
 <script>
 export default {
-    data(){
-        return{
-            
-        modalShow: false,
-       
-        }
-    },
-    methods:{
-       
-        openModal(){
-           
-            this.$bvModal.show('modal-1')
-            var v = this;
-            setTimeout(function(){
-                v.$bvModal.hide('modal-1')
-            },1000)
-        }
-    }
-    
+   
    
 };
     
 </script>
 
 <style scoped>
-
 .dropdown {
   position: relative;
   display: inline-block;
 }
-
 .dropdown-content {
   display: none;
   position: absolute;
@@ -152,7 +132,6 @@ export default {
   color:black;
   z-index: 1;
 }
-
 .dropdown:hover .dropdown-content {
   display: block;
 }
@@ -176,9 +155,6 @@ color:#6c0c33;
      width:100px;
      color:#6c0c33;
       height: 15px;
-
-
-
 }
 .sepet {
     position:absolute;
@@ -187,8 +163,6 @@ color:#6c0c33;
      width:100px;
      color:#6c0c33;
     height: 15px;
-
-
 }
 .main-content 
 {  
@@ -198,7 +172,6 @@ color:#6c0c33;
     background-color:white;
     margin:0px 0px;
 }
-
 .header_ilk_kısım
 {   
    
@@ -215,7 +188,6 @@ color:#6c0c33;
     width:100%;
     height:50px;
     text-align :center;
-
 }
    
 .headercontainer
@@ -240,7 +212,6 @@ color:#6c0c33;
     top:0px;
     text-decoration:none;
 }
-
 .header_ikinci_kısım
 {
     max-width: 1750px;
@@ -273,11 +244,6 @@ color:#6c0c33;
   float:right;
   text-decoration: none;
 }
-
-
-
-
-
 *
 {box-sizing: border-box;
     border-radius:15px;
@@ -298,7 +264,6 @@ color:#6c0c33;
      {
       float: left;
       
-
     }
     .topnav input[type=text]  /*input yapılacak kısım*/
     {
@@ -351,7 +316,6 @@ color:#6c0c33;
         
       }
     }
-
  .konum1 {
   position:relative;
   background-color:#6c0c33;
@@ -364,6 +328,4 @@ color:#6c0c33;
    right:200px;
    bottom:35px;
  }
-
-
 </style>

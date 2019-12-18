@@ -260,7 +260,7 @@ export default {
 }
 .kahvekonum {
     position: relative;
-    top:100px;
+    top:200px;
     width: 90%;
     height: 200px;
     left: 20px;
@@ -383,8 +383,8 @@ export default {
  .footerfoto
  {
    position:absolute;
-   right:450px;
-   bottom:280px;
+   right:200px;
+   bottom:0px;
  }
 
 

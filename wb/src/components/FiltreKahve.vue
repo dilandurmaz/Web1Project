@@ -3,18 +3,19 @@
   
     
     <div>
-       <img style="width:100%;position:relative;top:100px;" src="../assets/filtrekahvesi.png" >
-    </div>
-     <router-link    to="/turkkahvesi-sayfasi"> 
-    <b-button style="position:relative;top:110px;left:-300px;"   variant="outline-secondary">TÜRK KAHVESİ</b-button>
+       <img style="width:100%;position:relative;top:200px;" src="../assets/filtrekahvesi.png" >
+    </div>    
+      <router-link    to="/turkkahvesi-sayfasi"> 
+    <b-button style="position:relative;top:210px;left:-300px;"   variant="outline-secondary">TÜRK KAHVESİ</b-button>
       </router-link>
-    <b-button style="position:relative;top:110px;left:-290px;"   variant="outline-secondary">FİLTRE KAHVE</b-button>
-    <b-button style="position:relative;top:110px;left:-280px;"   variant="outline-secondary">YÖRESEL KAHVE</b-button>
-    <b-button style="position:relative;top:110px;left:-270px;"   variant="outline-secondary">ESPRESSO</b-button>
-    <b-button style="position:relative;top:110px;left:-260px;"   variant="outline-secondary">HAZIR KAHVELER</b-button> <br><br>
-    <b-button style="position:relative;top:110px;left:-490px;"   variant="outline-secondary">SALEP VE SICAK ÇİKOLATA</b-button>
-    <b-button style="position:relative;top:110px;left:-470px;"   variant="outline-secondary">ŞURUPLAR</b-button>
-
+       <router-link    to="/filtrekahve-sayfasi"> 
+    <b-button style="position:relative;top:210px;left:-290px;"   variant="outline-secondary">FİLTRE KAHVE</b-button>
+       </router-link>
+    <b-button style="position:relative;top:210px;left:-280px;"   variant="outline-secondary">YÖRESEL KAHVE</b-button>
+    <b-button style="position:relative;top:210px;left:-270px;"   variant="outline-secondary">ESPRESSO</b-button>
+    <b-button style="position:relative;top:210px;left:-260px;"   variant="outline-secondary">HAZIR KAHVELER</b-button> <br><br>
+    <b-button style="position:relative;top:210px;left:-490px;"   variant="outline-secondary">SALEP VE SICAK ÇİKOLATA</b-button>
+    <b-button style="position:relative;top:210px;left:-470px;"   variant="outline-secondary">ŞURUPLAR</b-button>
     <div class="row" style="position:relative;top:140px;"> 
                      <!-- %100 -->
                      

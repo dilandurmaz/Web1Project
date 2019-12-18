@@ -6,13 +6,15 @@
     </div>
 
     <div>
-       <img style="position:relative;left:-600px;top:70px;width:4%;" src="../assets/tek.png" >
+       <img style="position:relative;left:-600px;top:210px;width:4%;" src="../assets/tek.png" >
     </div>
     <div>
-       <router-link  to="/aksesuar2-sayfasi"> <img  style="position:relative;left:-500px;top:11px;width:55px;;"  src="../assets/çok.png" ></router-link>
+       <router-link  to="/aksesuar2-sayfasi"> <img  style="position:relative;left:-500px;top:150px;width:55px;;"  src="../assets/çok.png" ></router-link>
     </div>
+
          
-          <div  style="position:relative;top:-100px;left:-550px;"> 
+         
+          <div  style="position:relative;top:110px;left:-550px;"> 
                      <!-- %100 -->
                   
                        <div   v-for="(kahve,index) in Aksesuarlar" :key="index">
@@ -232,7 +234,7 @@ export default {
 <style scoped>
 .kahvekonum {
     position: relative;
-    top:60px;
+    top:200px;
     width: 100%;
     height:3%;
     left: 20px;
@@ -349,7 +351,7 @@ export default {
 
 .yazıkonum {
  position:relative;
-  top:800px;
+  top:-200px;
   
  
 
@@ -358,7 +360,7 @@ export default {
 
  .konum1 {
   position:relative;
-  top:1450px;
+  top:400px;
   background-color:#6c0c33;
   border-radius: 0px;
   width:100%;
@@ -366,8 +368,8 @@ export default {
   .footerfoto
  {
    position:absolute;
-   right:450px;
-   bottom:280px;
+   right:200px;
+   bottom:50px;
  }
 
 
@@ -381,7 +383,7 @@ export default {
 
   height:80px;
   text-align:center;
-  top:1260px; 
+  top:200px; 
   width:1630px;
   height: 70px;
    cursor: pointer;
@@ -392,7 +394,7 @@ export default {
   border-radius: 0px;
   position: relative;
   background-color: white;
-   top:1260px; 
+   top:240px; 
   left:-100px;
   width:100%;
   height:80px;
@@ -402,7 +404,7 @@ export default {
   border-radius: 0px;
   position: relative;
   background-color: #e7e3e3;
-   top:1260px; 
+   top:280px; 
   left:5px;
   width:100%;
   height:80px;
