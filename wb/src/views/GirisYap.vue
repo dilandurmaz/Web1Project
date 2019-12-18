@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <template>
   <div v-title="title" class="girisyap">
    

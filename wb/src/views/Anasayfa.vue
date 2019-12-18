@@ -6,9 +6,7 @@
     <Header />
     <Menu/>
     <Slider />
-    
-        
-         <Footer/>
+   <Footer/>
      
    
     
