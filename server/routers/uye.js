@@ -2,9 +2,16 @@ var express = require('express')
 var fs = require("fs")
 var uye = express.Router()
 
-uye.get('/', function (req, res) {
 
-  res.send('')
+uye.get('/', function (req, res) {
+  //dosya okundu
+  let data = fs.readFileSync("Uyeler.json");
+  //json formatında olduğu için objeye çevrildi
+  let kontrol = JSON.parse(data);
+  //res.send(coffee.kahveler) direk kahveleri döndürebilirsin
+ 
+  //okunan dosya bilgileri döndürüldü.
+  res.send(kontrol)
 
 })
 
