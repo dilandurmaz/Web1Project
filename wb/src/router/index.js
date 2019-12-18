@@ -17,13 +17,20 @@ import ÜyelikSayfası from  '../views/ÜyelikSayfası.vue'
 import TurkKahvesiSayfasi from  '../views/TurkKahvesiSayfasi.vue'
 import FiltreKahveSayfasi from  '../views/FiltreKahveSayfasi.vue'
 import AksesuarSayfasi2 from  '../views/AksesuarSayfasi2.vue'
-
+import Gift from  '../views/Gift.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
+    name: 'anasayfa',
+    component:Gift,
+  
+    
+  },
+  {
+    path: '/anasayfa',
     name: 'anasayfa',
     component: Anasayfa,
   
