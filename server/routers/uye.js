@@ -4,7 +4,7 @@ var uye = express.Router()
 
 uye.get('/', function (req, res) {
 
-  res.send(uye)
+  res.send('')
 
 })
 
@@ -21,7 +21,7 @@ uye.post('/kaydet', function (req, res) {
   //tüm üyeleri formatlı olarak dosyaya yazdık format: (iç içe objelerde 2 boşluk bırakarak) 
   fs.writeFileSync("Uyeler.json", JSON.stringify(arr, undefined, 2))
 
-  res.send(true)
+  res.send({err:false})
 })
 
 
