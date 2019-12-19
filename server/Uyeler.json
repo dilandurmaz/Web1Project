@@ -1,5 +1,11 @@
 [
   {
+    "AdSoyad": "özgür özkaya",
+    "Eposta": "özgur@gmail.com",
+    "CepTelefonu": "05336896525",
+    "Parola": "ozgur123"
+  },
+  {
     "AdSoyad": "Dilan Durmaz",
     "Eposta": "dilan@gmail.com",
     "CepTelefonu": "05380590122",
@@ -11,4 +17,5 @@
     "CepTelefonu": "05346982258",
     "Parola": "ecenur123"
   }
+  
 ]

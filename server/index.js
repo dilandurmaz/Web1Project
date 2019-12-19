@@ -7,13 +7,13 @@ var aksesuar = require("./routers/aksesuar")
 var uye = require("./routers/uye")
 var cors = require("cors")
 var bodyParser = require("body-parser")
-//hangi uzantılar için hangi route objesinin kullanacağı belirtildi.
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
 }));
-
+//hangi uzantılar için hangi route objesinin kullanacağı belirtildi.
 app.use(cors())
 app.use("/home", home)
 app.use("/turk", turk)
